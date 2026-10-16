@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,11 +28,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 
       {/* navbar remain same throughout , div remain same but the content of div changes */}
         <nav className="bg-gray-800 text-white p-4 flex gap-4">
-          <a href="/">Home</a>
-          <a href="/about">about</a>
-          <a href="/sheriyans">sheriyans</a>
-          <a href="/sheriyans/classroom">classroom</a>
+          <Link href="/">Home</Link>
+          <Link href="/about">about</Link>
+          <Link href="/sheriyans">sheriyans</Link>
+          <Link href="/sheriyans/classroom">classroom</Link>
         </nav>
+
+        {/* anchor tag leads to page reload and this leads to reuse and reloading of resources , this means that  . to solve this problem use Links*/}
         
 
         <div className="outline outline-red-500">
