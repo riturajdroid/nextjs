@@ -26,16 +26,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
 
-      {/* navbar remain same throughout , div remain same but the content of div changes */}
         <nav className="bg-gray-800 text-white p-4 flex gap-4">
           <Link href="/">Home</Link>
           <Link href="/about">about</Link>
           <Link href="/sheriyans">sheriyans</Link>
           <Link href="/sheriyans/classroom">classroom</Link>
-        </nav>
-
-        {/* anchor tag leads to page reload and this leads to reuse and reloading of resources , this means that  . to solve this problem use Links*/}
-        
+        </nav>        
 
         <div className="outline outline-red-500">
           {children}

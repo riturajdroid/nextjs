@@ -1,6 +1,3 @@
-//setup command - npx create-next-app@latest .
-
-
 import Card from "@/components/Card";
 
 export default function Home() {
